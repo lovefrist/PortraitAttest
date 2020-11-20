@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PortraitAttest</string>
+    <string name="home_person">人像认证</string>
+    <string name="home_person_english">Portrait authentication</string>
+    <string name="home_drive">人像特质</string>
+    <string name="home_drive_english">Portrait traits</string>
+    <string name="home_face">人脸注册</string>
+    <string name="title">彰显自己</string>
+</resources>
