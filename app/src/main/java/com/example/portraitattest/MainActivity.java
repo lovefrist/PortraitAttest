@@ -10,6 +10,9 @@ import com.example.portraitattest.base.BaseActivity;
 import com.example.portraitattest.view.activity.AuthenticateActivity;
 import com.example.portraitattest.view.activity.FeatureActivity;
 import com.example.portraitattest.view.activity.RegisterActivity;
+import com.tencent.bugly.crashreport.CrashReport;
+
+import java.util.Random;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
     private RelativeLayout homePersonRl;
@@ -33,6 +36,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         homeRegisterRl.setOnClickListener(this);
 
     }
+
 
     protected void initView() {
         homePersonRl = findViewById(R.id.home_personRl);
@@ -58,5 +62,31 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
 
         }
+    }
+
+    public void testBug(View view) {
+
+        Random random = new Random();
+        int i = random.nextInt(3);
+        Log.d("TAG", "testBug: 开始测试代码"+i);
+//        switch (i){
+//            case 1:
+//                CrashReport.testJavaCrash();
+//                break;
+//            case 2:
+//                CrashReport.testANRCrash();
+//                break;
+//            case 3:
+//                CrashReport.testNativeCrash();
+//                break;
+//            default:
+//                CrashReport.testNativeCrash();
+//                break;
+//
+//        }
+        CrashReport.testANRCrash();
+
+
+
     }
 }
